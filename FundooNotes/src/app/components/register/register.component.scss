@@ -1,0 +1,45 @@
+.F{
+    color: blue;
+}
+.u{
+    color: red;
+}
+.n{
+    color: orange;
+}
+.d{
+    color: green;
+}
+.o{
+    color: red;
+}
+.oo{
+    color: blue;
+}
+.h2{
+    font-size: 20px;
+
+}
+
+
+.outer{
+    border: 1px solid black;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    height: auto;
+    width: 200px;;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.username{
+
+    width: 75vh;
+}

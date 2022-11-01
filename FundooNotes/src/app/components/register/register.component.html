@@ -1,0 +1,72 @@
+<div class="outer">
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <div>
+            <div>
+                <h1>
+                    <span class="F">F</span>
+                    <span class="u">u</span>
+                    <span class="n">n</span>
+                    <span class="d">d</span>
+                    <span class="o">o</span>
+                    <span class="oo">o</span>
+                </h1>
+                <h2 class="h2">Create your Fundoo Account</h2>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <mat-form-field appearance="outline">
+                    <mat-label>First name</mat-label>
+                    <input matInput placeholder="FirstName">
+                    <mat-error>First Name is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" style="margin-left: 13px;">
+                    <mat-label> Last name</mat-label>
+                    <input matInput placeholder="Last Name">
+                    <mat-error>Last Name is required</mat-error>
+                </mat-form-field>
+            </div>
+
+
+            <mat-form-field appearance="outline" class="username">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username">
+                <mat-hint>You can use letters,numbers & periods</mat-hint>
+            </mat-form-field>
+            <br/><br/>
+            <div class="innerDiv">
+                <a href="#" class="myAccount">Use my current email address instead</a>
+            </div>
+            <br/>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Password">
+
+
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm</mat-label>
+                    <input matInput placeholder="Confirm">
+                </mat-form-field>
+            </div>
+            
+            <mat-hint >Use 8 or more characters with a mix of letters, numbers &
+                symbols
+            </mat-hint>
+            <br/><br/>
+            <form>
+                <input type="checkbox">
+                <label for="Show password">Show password</label><br>
+            </form>
+        </div>
+
+
+
+    </div>
+    <div class="img">
+        <div div fxLayout="column" fxLayoutAlign="center end">
+            <img src="../../../assets/Googlelogo.svg" alt="">
+            <mat-hint class="text">One account.All of Fundoo working for you.</mat-hint>
+        </div>
+    </div>
+</div>
