@@ -11,6 +11,8 @@ import {MatInputModule} from '@angular/material/input';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

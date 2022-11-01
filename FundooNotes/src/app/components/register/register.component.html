@@ -32,11 +32,11 @@
                 <input matInput placeholder="Username">
                 <mat-hint>You can use letters,numbers & periods</mat-hint>
             </mat-form-field>
-            <br/><br/>
+            <br />
             <div class="innerDiv">
-                <a href="#" class="myAccount">Use my current email address instead</a>
+                <button mat-button color="primary">Use my current email address instead</button>
             </div>
-            <br/>
+            <br />
             <div fxLayout="row" fxLayoutAlign="space-between center">
                 <mat-form-field appearance="outline">
                     <mat-label>Password</mat-label>
@@ -49,20 +49,27 @@
                     <input matInput placeholder="Confirm">
                 </mat-form-field>
             </div>
-            
-            <mat-hint >Use 8 or more characters with a mix of letters, numbers &
+
+            <mat-hint>Use 8 or more characters with a mix of letters, numbers &
                 symbols
             </mat-hint>
-            <br/><br/>
+            <br /><br />
             <form>
                 <input type="checkbox">
                 <label for="Show password">Show password</label><br>
             </form>
         </div>
-
-
+        <div fxLayout="row" fxLayoutAlign="end stretch">
+            <button mat-button color="primary">Sing in instead</button>
+            <button mat-flat-button color="primary">Next</button>
+        </div>
 
     </div>
+
+
+
+
+
     <div class="img">
         <div div fxLayout="column" fxLayoutAlign="center end">
             <img src="../../../assets/Googlelogo.svg" alt="">
