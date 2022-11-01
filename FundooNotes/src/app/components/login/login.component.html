@@ -1,16 +1,22 @@
 <div class="outer">
     <div fxLayout="column" fxLayoutAlign="center center">
         <div>
-            <h1>
-                <span class="F">F</span>
-                <span class="u">u</span>
-                <span class="n">n</span>
-                <span class="d">d</span>
-                <span class="o">o</span>
-                <span class="oo">o</span>
-            </h1>
-            <h2 style="font-size: 20px;">Sign in</h2>
-            <h3 style="font-size: 20px;">Use your Fundoo Account</h3>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <h1>
+                    <span class="F">F</span>
+                    <span class="u">u</span>
+                    <span class="n">n</span>
+                    <span class="d">d</span>
+                    <span class="o">o</span>
+                    <span class="oo">o</span>
+                </h1>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <h2 style="font-size: 20px;">Sign in</h2>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <h3 style="font-size: 20px;">Use your Fundoo Account</h3>
+            </div>
         </div>
 
 
@@ -29,12 +35,18 @@
             </mat-form-field>
         </div>
 
-        <div class="innerDiv">
-            <a href="#" class="myAccount">Forgot Password?</a>
+        <button mat-button color="primary">Forgot Password?</button>
+        <mat-hint>Not your computer? Use Guest mode to sign in privately.</mat-hint>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <button mat-button color="primary">Learn more</button>
         </div>
         <br />
-        <button class="Create">Create Account</button>
-        <button class="Next">Next</button>
+        <div class="next">
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <button mat-button color="primary">Create account</button>
+                <button mat-flat-button color="primary">Next</button>
+            </div>
+        </div>
 
     </div>
 </div>
