@@ -1,74 +1,81 @@
 <div class="outer">
     <div fxLayout="column" fxLayoutAlign="center center">
-        <div>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div>
-                <h1>
-                    <span class="F">F</span>
-                    <span class="u">u</span>
-                    <span class="n">n</span>
-                    <span class="d">d</span>
-                    <span class="o">o</span>
-                    <span class="oo">o</span>
-                </h1>
-                <h2 class="h2">Create your Fundoo Account</h2>
-            </div>
+                <div>
+                    <h1>
+                        <span class="F">F</span>
+                        <span class="u">u</span>
+                        <span class="n">n</span>
+                        <span class="d">d</span>
+                        <span class="o">o</span>
+                        <span class="oo">o</span>
+                    </h1>
+                    <h2 class="h2">Create your Fundoo Account</h2>
+                </div>
 
-            <div fxLayout="row" fxLayoutAlign="space-between center">
-                <mat-form-field appearance="outline">
-                    <mat-label>First name</mat-label>
-                    <input matInput placeholder="FirstName">
-                    <mat-error>First Name is required</mat-error>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <mat-form-field appearance="outline">
+                        <mat-label>First name</mat-label>
+                        <input matInput placeholder="FirstName" formControlName="firstName">
+                        <mat-error>First Name is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" style="margin-left: 13px;">
+                        <mat-label> Last name</mat-label>
+                        <input matInput placeholder="Last Name" formControlName="lastName">
+                        <mat-error>Last Name is required</mat-error>
+                    </mat-form-field>
+                </div>
+
+
+                <mat-form-field appearance="outline" class="username">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="Username" formControlName="Username">
+                    <mat-error>User Name is required</mat-error>
+                    <mat-hint>You can use letters,numbers & periods</mat-hint>
                 </mat-form-field>
-                <mat-form-field appearance="outline" style="margin-left: 13px;">
-                    <mat-label> Last name</mat-label>
-                    <input matInput placeholder="Last Name">
-                    <mat-error>Last Name is required</mat-error>
-                </mat-form-field>
+                <br />
+                <div class="innerDiv">
+                    <button mat-button color="primary">Use my current email address instead</button>
+                </div>
+                <br />
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" formControlName="Password">
+                        <mat-error>Password is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Confirm Password</mat-label>
+                        <input matInput placeholder="Confirm Password" formControlName="Confirm">
+                        <mat-error>Password is required</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <mat-hint>Use 8 or more characters with a mix of letters, numbers &
+                    symbols
+                </mat-hint>
+                <br /><br />
+                <form>
+                    <input type="checkbox">
+                    <label for="Show password">Show password</label><br>
+                </form>
             </div>
-
-
-            <mat-form-field appearance="outline" class="username">
-                <mat-label>Username</mat-label>
-                <input matInput placeholder="Username">
-                <mat-hint>You can use letters,numbers & periods</mat-hint>
-            </mat-form-field>
             <br />
-            <div class="innerDiv">
-                <button mat-button color="primary">Use my current email address instead</button>
+            <div fxLayout="row" fxLayoutAlign="space-between end" class="btn-layout">
+                <button mat-button color="primary" routerLink="/login">Sing in instead</button>
+                <button mat-flat-button color="primary">Next</button>
             </div>
-            <br />
-            <div fxLayout="row" fxLayoutAlign="space-between center">
-                <mat-form-field appearance="outline">
-                    <mat-label>Password</mat-label>
-                    <input matInput placeholder="Password">
-
-
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Confirm</mat-label>
-                    <input matInput placeholder="Confirm">
-                </mat-form-field>
-            </div>
-
-            <mat-hint>Use 8 or more characters with a mix of letters, numbers &
-                symbols
-            </mat-hint>
-            <br /><br />
-            <form>
-                <input type="checkbox">
-                <label for="Show password">Show password</label><br>
-            </form>
-        </div>
-           
+        </form>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-between end" class="btn-layout">
-        <button mat-button color="primary">Sing in instead</button>
-        <button mat-flat-button color="primary">Next</button>
-    </div>
+
+
     <div class="img">
-        <div div fxLayout="column" fxLayoutAlign="center end">
+        <div div fxLayout="column" fxLayoutAlign="center center">
             <img src="../../../assets/Googlelogo.svg" alt="">
-            <mat-hint class="text">One account.All of Fundoo working for you.</mat-hint>
+            <p>One account.All of Fundoo</p>
+            <p>working for you.</p>
+
         </div>
     </div>
 
