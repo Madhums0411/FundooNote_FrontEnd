@@ -8,12 +8,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ResetpasswordComponent implements OnInit {
 
-  loginForm!: FormGroup;
+  resetForm!: FormGroup;
   submitted = false;
 
   constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(){
+    this.resetForm = this.formBuilder.group({
+      Newpassword: ['', [Validators.required, Validators.minLength(8)]],
+      Cpassword: ['', [Validators.required, Validators.minLength(8)]],
 
+    })
+  }
 }
