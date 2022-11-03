@@ -20,4 +20,16 @@ export class ResetpasswordComponent implements OnInit {
 
     })
   }
+  onSubmit() {
+    this.submitted = true;
+    if (this.resetForm.valid) {
+      return;
+    }
+
+  }
+
+  onReset() {
+    this.submitted = false;
+    this.resetForm.reset();
+  }
 }
