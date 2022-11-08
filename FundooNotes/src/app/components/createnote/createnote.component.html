@@ -1,0 +1,25 @@
+<div class="section" fxLayout="column" fxLayoutAlign="center">
+    <form [formGroup]="createForm" (ngSubmit)="close()">
+        <div class="form">
+            <div fxLayout="column" fxLayoutAlign="space-evenly center">
+
+                <div class="title" *ngIf="show" (click)="isshow()">
+                    <mat-form-field appearance="outline">
+                        <input type="text" formControlName="title" matInput placeholder="Title">
+                    </mat-form-field>
+
+                </div>
+                <div class="takenote" *ngIf="!show || show" (click)="isshow()">
+                    <mat-form-field appearance="outline">
+                        <input type="text" formControlName="note" matInput placeholder="Take a note...">
+                    </mat-form-field>
+
+                </div>
+                <div class="closebutton" *ngIf="show" (click)="isshow()" fxLayout="row" fxLayoutAlign="space-evenly center">
+                    <!-- <app-icons></app-icons> -->
+                    <button class="button">Close</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

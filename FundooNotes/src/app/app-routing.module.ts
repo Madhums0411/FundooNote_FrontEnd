@@ -1,6 +1,8 @@
+import { createComponentDefinitionMap } from '@angular/compiler/src/render3/partial/component';
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArchiveComponent } from './components/archive/archive.component';
+import { CreatenoteComponent } from './components/createnote/createnote.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
@@ -14,14 +16,14 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'forgot',component:ForgotpasswordComponent},
   {path:'reset',component:ResetpasswordComponent},
+ 
   {path:'dashboard',component:DashboardComponent,
 children:[
-  {path:'notes',component:GetallnotesComponent},
-  {path:'archive',component:ArchiveComponent},
-  {path:'trash',component:TrashComponent}
-]
-
-}
+  {path:'Notes',component:GetallnotesComponent},
+  {path:'create',component:CreatenoteComponent},
+  {path:'Archive',component:ArchiveComponent},
+  {path:'Trash',component:TrashComponent}
+]}
   
 ];
 
