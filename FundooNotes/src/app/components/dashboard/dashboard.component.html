@@ -1,0 +1,68 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="" class="example-toolbar">
+
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  
+    <img src="../../../assets/keep.png" alt="">
+    <h1 class="example-app-name">Fundoo</h1>
+    
+    <div class="searchbar">
+      <div class="search">
+          <img height="90%" width="90%" src="../../../assets/Search.svg" alt="">
+      </div>
+  </div>
+
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>refresh</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>settings</mat-icon>
+    </button>
+
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
+      <mat-nav-list routerLink="/dashboard/Notes">
+        <div class="notes">
+            <img height="100%" width="20px" src="../../../assets/lightbulb_FILL0_wght400_GRAD0_opsz48.svg"
+                alt="">
+        </div>
+        <a href="">Notes</a>
+    </mat-nav-list>
+    <mat-nav-list routerLink="" >
+        <div class="rem">
+            <img height="100%" width="20px" src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.svg"
+                alt="">
+        </div>
+        <a href="">Remainders</a>
+    </mat-nav-list>
+    <mat-nav-list routerLink="">
+        <div class="edit">
+            <img height="100%" width="20px" src="../../../assets/edit_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+        </div>
+        <a href="">Edit label</a>
+    </mat-nav-list>
+    <mat-nav-list routerLink="/dashboard/Archive" >
+        <div class="archive">
+            <img height="100%" width="20px" src="../../../assets/system_update_alt_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+        </div>
+        <a href="">Archive</a>
+    </mat-nav-list>
+    <mat-nav-list routerLink="/Trash" >
+        <div class="trash">
+            <img height="100%" width="20px" src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+        </div>
+        <a href="">Trash</a>
+    </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <p *ngFor="let content of fillerContent">{{content}}</p>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

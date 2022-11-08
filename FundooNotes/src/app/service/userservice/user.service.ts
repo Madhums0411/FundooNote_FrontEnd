@@ -26,4 +26,12 @@ export class UserService {
     }
    return this.http.postService('https://localhost:44315/api/User/Login',data,false ,header)
   }
+  forgot(data:any){
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type':'application/json'
+      })
+    }
+    return this.http.postService('https://localhost:44315/api/User/ForgotPassword?Email=madhumsmadhu810%40gmail.com',data,false,header)
+  }
 }
