@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class CreatenoteComponent implements OnInit {
   createForm!: FormGroup;
   show = false;
+  submitted=false;
 
   constructor(private formbuilder: FormBuilder) { }
 
@@ -23,5 +24,9 @@ export class CreatenoteComponent implements OnInit {
   }
   close() {
     this.show = false;
+  }
+  onSubmit(){
+    this.submitted=true;
+    return;
   }
 }

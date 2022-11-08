@@ -1,25 +1,18 @@
-<div class="section" fxLayout="column" fxLayoutAlign="center">
-    <form [formGroup]="createForm" (ngSubmit)="close()">
-        <div class="form">
-            <div fxLayout="column" fxLayoutAlign="space-evenly center">
-
-                <div class="title" *ngIf="show" (click)="isshow()">
-                    <mat-form-field appearance="outline">
-                        <input type="text" formControlName="title" matInput placeholder="Title">
-                    </mat-form-field>
-
-                </div>
-                <div class="takenote" *ngIf="!show || show" (click)="isshow()">
-                    <mat-form-field appearance="outline">
-                        <input type="text" formControlName="note" matInput placeholder="Take a note...">
-                    </mat-form-field>
-
-                </div>
-                <div class="closebutton" *ngIf="show" (click)="isshow()" fxLayout="row" fxLayoutAlign="space-evenly center">
-                    <!-- <app-icons></app-icons> -->
-                    <button class="button">Close</button>
-                </div>
+<form action="" [formGroup]="createForm" (ngSubmit)="onSubmit()">
+    <div fxLayout="column" fxLayoutAlign="start center" class="main-div">
+        <mat-card>
+            <div fxLayout="row" fxLayoutAlign="none end" *ngIf="show" class="title-section">
+                <input name="text" id="text" class="note-section" placeholder="Title" formControlName="title"
+                    type="text">
+                <img src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz24.svg" alt="">
             </div>
-        </div>
-    </form>
-</div>
+            <div *ngIf="show || !show" (click)="isshow()">
+                <input name="text" id="text" class="note-section" placeholder="Take a note..."
+                    formControlName="description">
+            </div>
+            <div *ngIf="show" fxLayout="row" fxLayoutAlign="end">
+                <button mat-button class="btn-close" (click)="close()">Close</button>
+            </div>
+        </mat-card>
+    </div>
+</form>
