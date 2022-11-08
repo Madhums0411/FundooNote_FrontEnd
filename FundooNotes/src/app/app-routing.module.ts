@@ -6,25 +6,27 @@ import { CreatenoteComponent } from './components/createnote/createnote.componen
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
+import { IconComponent } from './components/icon/icon.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import { TrashComponent } from './components/trash/trash.component';
 
 const routes: Routes = [
-  {path:'register',component:RegisterComponent},
-  {path:'login',component:LoginComponent},
-  {path:'forgot',component:ForgotpasswordComponent},
-  {path:'reset',component:ResetpasswordComponent},
- 
-  {path:'dashboard',component:DashboardComponent,
-children:[
-  {path:'Notes',component:GetallnotesComponent},
-  {path:'create',component:CreatenoteComponent},
-  {path:'Archive',component:ArchiveComponent},
-  {path:'Trash',component:TrashComponent}
-]}
-  
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'forgot', component: ForgotpasswordComponent },
+  { path: 'reset', component: ResetpasswordComponent },
+  { path: 'icons', component: IconComponent },
+  {path: 'dashboard', component: DashboardComponent,
+    children: [
+      { path: 'Notes', component: GetallnotesComponent },
+      { path: 'create', component: CreatenoteComponent },
+      { path: 'Archive', component: ArchiveComponent },
+      { path: 'Trash', component: TrashComponent }
+    ]
+  }
+
 ];
 
 @NgModule({
