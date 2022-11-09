@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-display',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./display.component.scss']
 })
 export class DisplayComponent implements OnInit {
-
-  constructor() { }
-
+  displayform!: FormGroup;
+  submitted=false;
+  constructor(private formbuilder: FormBuilder) { }
+  
   ngOnInit(): void {
   }
-
+  onSubmit(){
+    this.submitted=true;
+    return;
+  }
 }

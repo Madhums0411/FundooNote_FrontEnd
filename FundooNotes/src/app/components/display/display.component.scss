@@ -1,0 +1,26 @@
+.main-div mat-card {
+    width: 20%;
+    border-radius: 10px;
+    // display: flex;
+    // justify-content: flex-end;
+}
+
+
+
+.note-section {
+    border: none;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    font-weight: bold;
+    letter-spacing: .00625em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-decoration: center;
+    margin-bottom: 50px;
+    // margin-top: -5px;
+    
+}

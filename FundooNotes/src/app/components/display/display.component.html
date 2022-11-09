@@ -1,1 +1,24 @@
-<p>display works!</p>
+<form action="" [formGroup]="displayform" (ngSubmit)="onSubmit()">
+    <div fxLayout="row" fxLayoutAlign="start center" class="main-div">
+        <mat-card>
+
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <input name="text" id="text" class="note-section" >
+
+            </div>
+
+            <app-icon></app-icon>
+        </mat-card>
+        <!-- <br>
+        <mat-card>
+
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <input name="text" id="text" class="note-section" >
+
+            </div>
+
+            <app-icon></app-icon>
+        </mat-card> -->
+    </div>
+
+</form>
