@@ -1,0 +1,18 @@
+<div class="input">
+    <div class="note">
+
+        <div class="mat-title" fxLayout="row" fxLayoutAlign="space-between center">
+            <input placeholder="Title" [(ngModel)]="title">
+        </div>
+
+        <div class="mat-title">
+            <input placeholder="Description" [(ngModel)]="description">
+        </div>
+        <br>
+        <div class="btn-close" fxLayout="row" fxLayoutAlign="space-between center">
+            <app-icon></app-icon>
+            <button mat-button (click)="onNoClick()" >Update</button>
+        </div>
+
+    </div>
+</div>

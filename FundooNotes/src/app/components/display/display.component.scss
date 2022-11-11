@@ -1,13 +1,14 @@
 .maincontainer{
-    height: 25vh;
-    width: 20vw;
+    height: 23vh;
+    width: 17vw;
     display: flex;
     justify-content: center;
     align-items: center;
-   box-shadow: 8px 8px 8px gainsboro;
+   box-shadow: 8px 8px 8px white;
    position: relative;
    top: 40px;
-   left: 80px;
+   left: 0px;
+  
 }
 .sub{
 height: 100%;
@@ -16,6 +17,7 @@ display: flex;
 border: 1px solid gainsboro;
 border-radius: 5px;
 flex-direction: column;
+
 align-items: center;
 }
 
@@ -65,12 +67,12 @@ align-items: center;
 
 
 .sub1{
-    // height: 35%;
-    // width: 100%;
-    // display: flex;
-    // border: 0px solid red;
-    // align-items: flex-end;
-    // justify-content: space-evenly;
+    height: 35%;
+    width: 100%;
+    display: flex;
+    border: 0px solid red;
+    align-items: flex-end;
+    justify-content: space-evenly;
     border: none;
   outline: none;
   width: 100%;

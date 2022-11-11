@@ -28,6 +28,9 @@ import { CreatenoteComponent } from './components/createnote/createnote.componen
 import { DisplayComponent } from './components/display/display.component';
 import { IconComponent } from './components/icon/icon.component';
 import {MatCardModule} from '@angular/material/card';
+import { UpdateComponent } from './components/update/update.component';
+import { FormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +44,8 @@ import {MatCardModule} from '@angular/material/card';
     TrashComponent,
     CreatenoteComponent,
     DisplayComponent,
-    IconComponent
+    IconComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +63,9 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatExpansionModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    MatDialogModule
 
 
   ],
