@@ -52,7 +52,20 @@ export class NoteService {
         'Authorization':'Bearer '+this.token
       })
     }
-   return this.http.putService("https://localhost:44315/api/Notes/Archive?notesId="+data,{}, true,header)
+   return this.http.putService('https://localhost:44315/api/Notes/Archive?notesId='+data,{}, true,header)
+  }
+  Trash(data:any,){
+
+    console.log(data,this.token);
+    
+    
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+   return this.http.putService('https://localhost:44315/api/Notes/Trash?NoteId='+data,{}, true,header)
   }
 
 }

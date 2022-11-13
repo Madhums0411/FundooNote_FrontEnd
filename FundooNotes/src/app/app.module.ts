@@ -31,6 +31,7 @@ import {MatCardModule} from '@angular/material/card';
 import { UpdateComponent } from './components/update/update.component';
 import { FormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +66,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatListModule,
     MatCardModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
 
 
   ],
